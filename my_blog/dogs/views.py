@@ -1,3 +1,10 @@
-from django.shortcuts import render
+#from django.shortcuts import render
+from django.http import HttpResponse
 
-# Create your views here.
+
+def dogs_list(request):
+    return HttpResponse('Dogs List')
+
+
+def dog_detail(request, slug):
+    return HttpResponse(f'Dog {slug}')
